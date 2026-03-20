@@ -1,69 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-971RT0WXDL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-971RT0WXDL');
-</script>
   <title>Convert Images to PDF in Seconds – Free & No Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO -->
   <meta name="description" content="Convert images to PDF instantly. Free, no login, 100% private. Perfect for students and assignments.">
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-971RT0WXDL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-971RT0WXDL');
+  </script>
+
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #667eea, #764ba2);
+      background: linear-gradient(135deg, #4f46e5, #9333ea, #ec4899);
       margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .container {
+      width: 100%;
       max-width: 500px;
-      margin: auto;
-      padding: 20px;
+      padding: 15px;
     }
 
     .card {
       background: white;
       border-radius: 20px;
-      padding: 25px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      padding: 30px 20px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
       text-align: center;
     }
 
     h1 {
-      margin: 0;
+      margin-bottom: 10px;
       font-size: 26px;
     }
 
     .tagline {
       font-size: 14px;
       color: gray;
-      margin: 10px 0 20px;
+      margin-bottom: 10px;
     }
 
     .trust {
       font-size: 13px;
       color: #444;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     .upload-btn {
-      background: #667eea;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
       color: white;
-      padding: 14px;
-      border-radius: 12px;
+      padding: 16px;
+      border-radius: 14px;
       cursor: pointer;
-      display: inline-block;
       width: 100%;
       font-weight: bold;
       font-size: 16px;
+      margin-top: 10px;
+      transition: 0.2s;
+    }
+
+    .upload-btn:hover {
+      transform: scale(1.03);
     }
 
     #preview {
@@ -96,12 +105,18 @@
     .convert-btn {
       background: black;
       color: white;
-      padding: 14px;
-      border-radius: 12px;
-      margin-top: 20px;
+      padding: 16px;
+      border-radius: 14px;
+      margin-top: 15px;
       cursor: pointer;
       width: 100%;
       font-size: 16px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .convert-btn:hover {
+      background: #222;
     }
 
     .steps {
@@ -136,7 +151,6 @@
 
     <p class="trust">✔ 100% Private &nbsp;&nbsp; ✔ No Upload &nbsp;&nbsp; ✔ Works Instantly</p>
 
-    <!-- Hidden Upload -->
     <input type="file" id="upload" multiple accept="image/*" hidden>
 
     <div class="upload-btn" onclick="document.getElementById('upload').click()">
@@ -148,19 +162,18 @@
     <button class="convert-btn" onclick="convert()">⚡ Convert to PDF</button>
 
     <div class="steps">
-      <b>How it works:</b>
-      <br>1. Upload images  
-      <br>2. Click convert  
-      <br>3. Download PDF  
+      <b>How it works:</b><br>
+      1. Upload images<br>
+      2. Click convert<br>
+      3. Download PDF
     </div>
 
     <p class="footer">No signup required. Everything runs in your browser.</p>
 
-    <!-- SEO Content -->
     <div class="seo-text">
       <h2>Free Image to PDF Converter for Students</h2>
       <p>
-        Easily convert your assignment images into a single PDF. This tool works instantly without login and keeps your files private.
+        Easily convert your assignment images into a single PDF. Works instantly without login and keeps your files private.
       </p>
 
       <h3>Perfect for:</h3>
@@ -174,7 +187,6 @@
   </div>
 </div>
 
-<!-- jsPDF -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <script>
