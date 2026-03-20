@@ -17,16 +17,15 @@
   </script>
 
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #4f46e5, #9333ea, #ec4899);
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
+   body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f172a; /* dark blue */
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
     .container {
       width: 100%;
       max-width: 500px;
@@ -34,13 +33,14 @@
     }
 
     .card {
-      background: white;
-      border-radius: 20px;
-      padding: 30px 20px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-      text-align: center;
-    }
-
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+  text-align: center;
+  color: white;
+}
     h1 {
       margin-bottom: 10px;
       font-size: 26px;
@@ -59,17 +59,16 @@
     }
 
     .upload-btn {
-      background: linear-gradient(135deg, #6366f1, #8b5cf6);
-      color: white;
-      padding: 16px;
-      border-radius: 14px;
-      cursor: pointer;
-      width: 100%;
-      font-weight: bold;
-      font-size: 16px;
-      margin-top: 10px;
-      transition: 0.2s;
-    }
+  background: #22c55e;
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 15px;
+}
 
     .upload-btn:hover {
       transform: scale(1.03);
