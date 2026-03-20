@@ -147,7 +147,7 @@
 
     <input type="file" id="upload" multiple accept="image/*" hidden>
 
-    <div class="upload-btn" onclick="document.getElementById('upload').click()">
+    <div class="upload-btn" onclick="track('upload_clicked'); document.getElementById('upload').click();">
       📁 Click or Drag Images Here
     </div>
 
@@ -181,6 +181,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <script>
+function track(eventName) {
+  gtag('event', eventName);
+}
+
 let images = [];
 
 document.getElementById("upload").addEventListener("change", function(e) {
@@ -224,6 +228,8 @@ function convert() {
     alert("Upload images first");
     return;
   }
+
+  track("convert_clicked");
 
   const { jsPDF } = window.jspdf;
   let pdf = new jsPDF();
