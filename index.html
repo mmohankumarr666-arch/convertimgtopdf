@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Convert Images to PDF in Seconds – Free & No Login</title>
+  <title>Convert Images to PDF – Free & Instant</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
-  <meta name="description" content="Convert images to PDF instantly. Free, no login, 100% private. Perfect for students and assignments.">
+  <meta name="description" content="Free image to PDF converter. No login, fast, private. Perfect for students.">
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-971RT0WXDL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -18,68 +17,58 @@
 
   <style>
     * {
-  box-sizing: border-box;
-}
-   body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #0f172a; /* dark blue */
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-    .container {
-      width: 100%;
-      max-width: 420px;
-      padding: 15px;
+      box-sizing: border-box;
     }
 
- .card {
-  background: white;
-  border-radius: 20px;
-  padding: 25px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-  text-align: center;
-  color: black;
-}
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3f4f6;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
     h1 {
+      text-align: center;
+      font-size: 32px;
       margin-bottom: 10px;
-      font-size: 26px;
     }
 
     .tagline {
-      font-size: 14px;
+      text-align: center;
       color: gray;
-      margin-bottom: 10px;
+      margin-bottom: 30px;
     }
 
-    .trust {
-      font-size: 13px;
-      color: #444;
-      margin-bottom: 20px;
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
     }
 
- .upload-btn {
-  background: #22c55e;
-  color: white;
-  padding: 14px;
-  border-radius: 12px;
-  cursor: pointer;
-  width: 100%;
-  font-weight: bold;
-  font-size: 16px;
-  margin-top: 15px;
-  border: none;
-}
+    .upload-btn {
+      border: 2px dashed #6366f1;
+      padding: 30px;
+      border-radius: 12px;
+      cursor: pointer;
+      color: #6366f1;
+      font-weight: bold;
+      transition: 0.2s;
+    }
 
     .upload-btn:hover {
-      transform: scale(1.03);
+      background: #eef2ff;
     }
 
     #preview {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
       gap: 10px;
       margin-top: 20px;
     }
@@ -90,55 +79,59 @@
 
     img {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 8px;
     }
 
     .remove {
       position: absolute;
-      top: 5px;
-      right: 5px;
-      background: white;
+      top: 3px;
+      right: 3px;
+      background: black;
+      color: white;
       border-radius: 50%;
       cursor: pointer;
-      padding: 2px 6px;
-      font-size: 12px;
+      font-size: 10px;
+      padding: 2px 5px;
     }
 
     .convert-btn {
-      background: black;
+      background: #111827;
       color: white;
-      padding: 16px;
-      border-radius: 14px;
-      margin-top: 15px;
+      padding: 14px;
+      border-radius: 10px;
+      margin-top: 20px;
       cursor: pointer;
       width: 100%;
       font-size: 16px;
       font-weight: bold;
-      transition: 0.2s;
     }
 
     .convert-btn:hover {
-      background: #222;
+      background: #000;
     }
 
-    .steps {
-      text-align: left;
-      font-size: 14px;
-      margin-top: 20px;
-      color: #333;
-    }
-
-    .footer {
-      font-size: 12px;
+    .info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 25px;
+      font-size: 13px;
       color: gray;
-      margin-top: 15px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .seo-text {
-      margin-top: 30px;
-      text-align: left;
+    .seo {
+      margin-top: 40px;
       font-size: 14px;
       color: #333;
+    }
+
+    .seo h2 {
+      margin-bottom: 10px;
+    }
+
+    .seo ul {
+      padding-left: 18px;
     }
   </style>
 </head>
@@ -146,47 +139,43 @@
 <body>
 
 <div class="container">
+
+  <h1>Convert Images to PDF</h1>
+  <p class="tagline">Free • No Login • Instant Download</p>
+
   <div class="card">
-
-    <h1>Convert Images to PDF in Seconds</h1>
-    <p class="tagline">Free • No Login • Instant Download</p>
-
-    <p class="trust">✔ 100% Private &nbsp;&nbsp; ✔ No Upload &nbsp;&nbsp; ✔ Works Instantly</p>
 
     <input type="file" id="upload" multiple accept="image/*" hidden>
 
     <div class="upload-btn" onclick="document.getElementById('upload').click()">
-      📁 Upload Images
+      📁 Click or Drag Images Here
     </div>
 
     <div id="preview"></div>
 
-    <button class="convert-btn" onclick="convert()">⚡ Convert to PDF</button>
+    <button class="convert-btn" onclick="convert()">Convert to PDF</button>
 
-    <div class="steps">
-      <b>How it works:</b><br>
-      1. Upload images<br>
-      2. Click convert<br>
-      3. Download PDF
-    </div>
-
-    <p class="footer">No signup required. Everything runs in your browser.</p>
-
-    <div class="seo-text">
-      <h2>Free Image to PDF Converter for Students</h2>
-      <p>
-        Easily convert your assignment images into a single PDF. Works instantly without login and keeps your files private.
-      </p>
-
-      <h3>Perfect for:</h3>
-      <ul>
-        <li>Students submitting assignments</li>
-        <li>Converting notes to PDF</li>
-        <li>Sending documents quickly</li>
-      </ul>
+    <div class="info">
+      <span>✔ No signup</span>
+      <span>✔ 100% private</span>
+      <span>✔ Fast conversion</span>
     </div>
 
   </div>
+
+  <div class="seo">
+    <h2>Free Image to PDF Converter</h2>
+    <p>
+      Easily convert your images into a single PDF file. Perfect for students submitting assignments or sharing documents.
+    </p>
+
+    <ul>
+      <li>No login required</li>
+      <li>Works on mobile and desktop</li>
+      <li>Instant PDF download</li>
+    </ul>
+  </div>
+
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -211,7 +200,7 @@ document.getElementById("upload").addEventListener("change", function(e) {
       img.src = event.target.result;
 
       let removeBtn = document.createElement("span");
-      removeBtn.innerHTML = "❌";
+      removeBtn.innerHTML = "✖";
       removeBtn.className = "remove";
 
       removeBtn.onclick = function() {
